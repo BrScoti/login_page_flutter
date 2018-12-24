@@ -6,5 +6,8 @@ void main() {
     title: "Login App",
     debugShowCheckedModeBanner: false,
     home: new LoginScreen(),
+    theme: ThemeData(
+      hintColor: Colors.white
+    ),
   ));
 }

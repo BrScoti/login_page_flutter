@@ -6,8 +6,8 @@ class Tick extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (new Container(
-      width: 300.0,
-      height: 250.0,
+      width: 310.0,
+      height: 160.0,
       alignment: Alignment.center,
       decoration: new BoxDecoration(
         image: image,

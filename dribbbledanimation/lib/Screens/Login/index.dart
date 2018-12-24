@@ -1,3 +1,4 @@
+import 'package:dribbbledanimation/Components/alertPolit.dart';
 import 'package:flutter/material.dart';
 import 'styles.dart';
 import 'package:flutter/foundation.dart';
@@ -16,45 +17,44 @@ class LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new Container(
-          decoration: new BoxDecoration(
+      body: Container(
+          decoration: BoxDecoration(
             image: backgroundImage,
           ),
-          child: new Container(
-              decoration: new BoxDecoration(
-                  gradient: new LinearGradient(
+          child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
                 colors: <Color>[
-                  const Color.fromRGBO(162, 146, 199, 0.8),
-                  const Color.fromRGBO(51, 51, 63, 0.9),
+                  const Color.fromRGBO(162, 146, 199, 0.6),
+                  const Color.fromRGBO(51, 51, 63, 0.8),
                 ],
                 stops: [0.2, 1.0],
                 begin: const FractionalOffset(0.0, 0.0),
                 end: const FractionalOffset(0.0, 1.0),
               )),
-              child: new ListView(
+              child: ListView(
                 padding: const EdgeInsets.all(0.0),
                 children: <Widget>[
-                  new Stack(
+                  Stack(
                     alignment: AlignmentDirectional.bottomCenter,
                     children: <Widget>[
-                      new Column(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          new Tick(image: tick),
-                          new FormContainer(),
-                          new SignUp()
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20.0),
+                            child: Tick(image: tick),
+                          ),
+                          FormContainer(),
+                         Padding(child: InkWell(child: SignIn()), padding: EdgeInsets.only(top: 40.0),) ,
+                          SignUp(),
+                          AlertPolit(),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 50.0),
-                        child: new InkWell(
-                            child: new SignIn()),
-                      )
                     ],
                   ),
                 ],
               ))),
     );
-    
   }
 }
