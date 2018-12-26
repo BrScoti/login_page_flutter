@@ -1,11 +1,12 @@
-import 'package:dribbbledanimation/Components/alertPolit.dart';
 import 'package:flutter/material.dart';
 import 'styles.dart';
 import 'package:flutter/foundation.dart';
-import '../../Components/SignUpLink.dart';
-import '../../Components/Form.dart';
-import '../../Components/SignInButton.dart';
-import '../../Components/WhiteTick.dart';
+import '../../components/sign_in_button.dart';
+import '../../components/sign_up_link.dart';
+import '../../components/form.dart';
+import '../../components/white_tick.dart';
+import '../../components/alerta_politica.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key key}) : super(key: key);
